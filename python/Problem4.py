@@ -4,18 +4,18 @@
 #
 
 def result():
-    n = 0
+    maximalProduct = 0
 
     for i in range(999, 100, -1):
         for j in range(i, 100, -1):
             product = i * j
 
-            if product > n:
+            if product > maximalProduct:
                 productString = str(product)
 
                 if productString == productString[::-1]:
-                    n = product
+                    maximalProduct = product
 
-    return n
+    return maximalProduct
 
 print(result())
