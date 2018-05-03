@@ -5,10 +5,12 @@
 
 open System
 
+// Tells whether or not a given number is a palindrome, by reversing and comparing its string representation.
 let isPalindrome n =
     let figuresList = Seq.toList (sprintf "%d" n)
     figuresList = List.rev figuresList
 
+// Build a sequence of all palindromic products of 3-digit numbers.
 let palindromeProducts =
     seq {
         for i in 999 .. -1 .. 100 do
@@ -17,6 +19,7 @@ let palindromeProducts =
                 if isPalindrome product then yield product
         }
 
+// Result is the maximum of these products.
 let result = Seq.max palindromeProducts
 
 printfn "%A" result
