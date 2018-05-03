@@ -5,6 +5,9 @@
 
 open System
 
-let result = Seq.unfold (fun (a, b) -> Some(a + b, (b, a + b))) (0, 1) |> Seq.takeWhile (fun x -> x <= 4000000) |> Seq.where (fun x -> x % 2 = 0) |> Seq.sum
+let result = Seq.unfold (fun (a, b) -> Some(a + b, (b, a + b))) (0, 1)
+             |> Seq.takeWhile (fun x -> x <= 4000000)
+             |> Seq.where (fun x -> x % 2 = 0)
+             |> Seq.sum
 
 printfn "%A" result
