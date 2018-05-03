@@ -4,15 +4,6 @@
 #
 
 def result():
-    sum = 0
-    x = 1
-    y = 2
-
-    while x <= 4_000_000:
-        if x % 2 == 0:
-            sum += x
-        (x, y) = (y, x + y)
-
-    return sum
+    return sum(i for i in range(1000) if (i % 3 == 0 or i % 5 == 0))
 
 print(result())
