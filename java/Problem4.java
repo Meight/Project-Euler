@@ -6,7 +6,7 @@
 
 public class Problem4 {
     private static int solution() {
-        int n = 0;
+        int maximalProduct = 0;
         int product;
         String productString;
 
@@ -14,16 +14,16 @@ public class Problem4 {
             for (int j = i; j >= 100; j--) {
                 product = i * j;
 
-                if (product > n) {
+                if (product > maximalProduct) {
                     productString = Integer.toString(product);
 
                     if (productString.equals(new StringBuilder(productString).reverse().toString()))
-                        n = product;
+                        maximalProduct = product;
                 }
             }
         }
 
-        return n;
+        return maximalProduct;
     }
 
     public static void main(String[] args) {
