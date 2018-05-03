@@ -13,7 +13,7 @@ public class Problem3 {
         int currentFactor = 2;
         while (currentFactor * currentFactor < n) {
             while (n % currentFactor == 0)
-                n = n / currentFactor;
+                n /= currentFactor;
 
             currentFactor++;
         }
