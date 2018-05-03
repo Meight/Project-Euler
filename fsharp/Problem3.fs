@@ -5,6 +5,8 @@
 
 open System
 
+// Target number 600851475143 is too big to fit on a 32-bit integer representation.
+// We therefore use a 64-bit integer representation.
 let primeFactors n =
     let rec nextPrimeFactor n proposition factors =
         if proposition = n then
