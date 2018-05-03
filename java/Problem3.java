@@ -6,14 +6,16 @@
 
 public class Problem3 {
     private static long solution() {
+        // Target number is too large for 32-bit integer representation.
         long n = 600_851_475_143L;
-        int i = 2;
 
-        while (i * i < n) {
-            while (n % i == 0)
-                n = n / i;
+        // Look for prime factors in [2, sqrt(n)].
+        int currentFactor = 2;
+        while (currentFactor * currentFactor < n) {
+            while (n % currentFactor == 0)
+                n = n / currentFactor;
 
-            i++;
+            currentFactor++;
         }
 
         return n;
