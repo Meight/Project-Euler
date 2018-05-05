@@ -11,7 +11,7 @@ let rec gcd a b =
     | 0 -> a
     | _ -> gcd b (a % b)
 
-// Computes the lowest common multiplier (LCM) of {1, 2, ..., 20}.
+// Computes the lowest common multiplier (LCM) of {1, 2, ..., upperBound}.
 let compute upperBound =
     let rec loopIt answer i upperBound =
         if i = upperBound then answer
