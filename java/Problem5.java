@@ -6,8 +6,8 @@
 
 public class Problem5 {
     /**
-     * We're practically looking for the LCM of {1, ..., 20}, which we'll compute using
-     * the relation between LCM and GCD: LCM(a, b) = a * b / GCD(a, b).
+     * We're practically looking for the LCM (lowest common multiple) of {1, ..., 20},
+     * which we'll compute using the relation between LCM and GCD: LCM(a, b) = a * b / GCD(a, b).
      * We also use the commutative and associative properties of LCM to compute this result.
      */
     private static int solution() {
