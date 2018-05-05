@@ -5,6 +5,7 @@
 
 open System
 
+# Computes the greater common divisor of two integers which are not all zero.
 let rec gcd a b =
     match b with
     | 0 -> a
