@@ -20,6 +20,12 @@ public class Problem5 {
         return result;
     }
 
+    /**
+     * Computes the greater common divisor of two integers that are not all zero.
+     * @param a First integer.
+     * @param b Second integer.
+     * @return The largest integer that divides each of the integers.
+     */
     private static int gcd(int a, int b) {
         if (b == 0)
             return a;
