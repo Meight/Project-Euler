@@ -12,12 +12,11 @@ let rec gcd a b =
     | _ -> gcd b (a % b)
 
 // Computes the lowest common multiplier (LCM) of {1, 2, ..., 20}.
-// Assumes i <= 20.
-let rec compute answer i =
-    match i with
-    | 20 -> answer
-    | _ -> compute (answer * i / (gcd answer i)) (i + 1)
+let compute upperBound =
+    let rec loopIt answer i upperBound =
+        if i = upperBound then answer
+        else loopIt (answer * i / (gcd answer i)) (i + 1) upperBound
 
-let result = compute 1 1
+    loopIt 1 1 upperBound
 
-printfn "%A" result
+printfn "%A" (compute 20)
