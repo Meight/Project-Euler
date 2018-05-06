@@ -32,4 +32,6 @@ For learning purposes, solutions will be transcribed over time in the following 
 
 ## Statistical analysis
 
-Automate tests and log execution time for each approach/programming language. Automate graph generation from gathered data.
+- [ ] Automate tests; 
+- [ ] Log execution time for each approach/programming language;
+- [ ] Automate graph generation from gathered data.
