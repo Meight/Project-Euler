@@ -4,6 +4,16 @@ This repository contains a set of solutions to some problems from [Project Euler
 
 Most solutions are derived in three different approaches (paradigms) using Java, Python and F# programming languages.
 
+# Solutions and programming languages
+
+| Problem        | Java           | Python  | F# |
+| :--------------: |:--------------:| :-------:|:----:|
+| 1 | ✔ | ✔ | ✔ |
+| 2 | ✔ | ✔ | ✔ |
+| 3 | ✔ | ✔ | ✔ |
+| 4 | ✔ | ✔ | ✔ |
+| 5 | ✔ | ✔ | ✔ |
+| 6 | ✔ | ✔ | ✔ |
 ---
 
 My current statistics on Project Euler are:
