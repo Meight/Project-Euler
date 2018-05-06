@@ -22,7 +22,7 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 
 # Upcoming
 
-Solutions will be transcribed in (in order of priority)
+For learning purposes, solutions will be transcribed over time in the following programming languages (in order of priority).
 
 * Haskell;
 * R;
