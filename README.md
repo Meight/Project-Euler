@@ -5,4 +5,5 @@ This repository contains a set of solutions to some problems from [Project Euler
 ---
 
 My current statistics on Project Euler are:
+
 ![My stats.](https://projecteuler.net/profile/Meight.png "My stats.")
