@@ -22,4 +22,8 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 
 # Upcoming
 
-Solutions will be transcribed in Haskell.
+Solutions will be transcribed in (in order of priority)
+
+* Haskell;
+* R;
+* Rust.
