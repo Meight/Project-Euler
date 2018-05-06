@@ -22,8 +22,14 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 
 # Upcoming
 
+## New programming languages
+
 For learning purposes, solutions will be transcribed over time in the following programming languages (in order of priority).
 
 * Haskell;
 * R;
 * Rust.
+
+## Statistical analysis
+
+Automate tests and log execution time for each approach/programming language. Automate graph generation from gathered data.
