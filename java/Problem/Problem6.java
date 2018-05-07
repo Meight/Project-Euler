@@ -4,7 +4,8 @@
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-package Solution;import Test.EulerSolution;
+package Problem;
+
 import Test.Solution;
 
 @Solution(answer = 25164150)
