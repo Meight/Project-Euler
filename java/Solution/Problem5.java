@@ -1,9 +1,13 @@
 /*
- * This file contains a solution to the problem number 5 of the Project Euler, last modified on 5/5/2018.
+ * This file contains a solution to the problem number 1 of the Project Euler, last modified on 5/6/2018.
  *
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
+package Solution;import Test.EulerSolution;
+import Test.Solution;
+
+@Solution(answer = 232792560)
 public class Problem5 implements EulerSolution {
     /**
      * We're practically looking for the LCM (lowest common multiple) of {1, ..., 20},

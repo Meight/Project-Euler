@@ -1,9 +1,13 @@
 /*
- * This file contains a solution to the problem number 6 of the Project Euler, last modified on 5/6/2018.
+ * This file contains a solution to the problem number 1 of the Project Euler, last modified on 5/6/2018.
  *
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
+package Solution;import Test.EulerSolution;
+import Test.Solution;
+
+@Solution(answer = 25164150)
 public class Problem6 implements EulerSolution {
     public double solution() {
         int n = 100;

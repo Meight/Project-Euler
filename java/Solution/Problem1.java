@@ -1,9 +1,13 @@
 /*
- * This file contains a solution to the problem number 1 of the Project Euler, last modified on 5/1/2018.
+ * This file contains a solution to the problem number 1 of the Project Euler, last modified on 5/6/2018.
  *
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
+package Solution;import Test.EulerSolution;
+import Test.Solution;
+
+@Solution(answer = 233168)
 public class Problem1 implements EulerSolution {
     @Override
     public double solution() {

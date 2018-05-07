@@ -1,9 +1,13 @@
 /*
- * This file contains a solution to the problem number 8 of the Project Euler, last modified on 5/6/2018.
+ * This file contains a solution to the problem number 1 of the Project Euler, last modified on 5/6/2018.
  *
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
+package Solution;import Test.EulerSolution;
+import Test.Solution;
+
+@Solution(answer = 23514624000L)
 public class Problem8 implements EulerSolution {
     private static final int WINDOW_SIZE = 13;
 
