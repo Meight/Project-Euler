@@ -4,8 +4,8 @@
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-public class Problem6 {
-    private static int solution() {
+public class Problem6 implements EulerSolution {
+    public double solution() {
         int n = 100;
 
         int result = (int) (3 * Math.pow(n, 4) + 2 * Math.pow(n, 3) - 3 * Math.pow(n, 2) - 2 * n);
@@ -14,6 +14,6 @@ public class Problem6 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Problem6.solution());
+        System.out.println((new Problem6()).solution());
     }
 }

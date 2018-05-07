@@ -4,12 +4,10 @@
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-import java.util.Arrays;
-
-public class Problem8 {
+public class Problem8 implements EulerSolution {
     private static final int WINDOW_SIZE = 13;
 
-    private static double solution() {
+    public double solution() {
         double maximalProduct = 0;
         int maximalProductIndex = 0;
 
@@ -67,6 +65,6 @@ public class Problem8 {
     }
 
     public static void main(String[] args) {
-        System.out.println(String.format("%.0f", Problem8.solution()));
+        System.out.println(String.format("%.0f", (new Problem8()).solution()));
     }
 }

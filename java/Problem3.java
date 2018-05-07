@@ -4,8 +4,8 @@
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-public class Problem3 {
-    private static long solution() {
+public class Problem3 implements EulerSolution {
+    public double solution() {
         // Target number is too large for 32-bit integer representation.
         long n = 600_851_475_143L;
 
@@ -22,6 +22,6 @@ public class Problem3 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Problem3.solution());
+        System.out.println((new Problem3()).solution());
     }
 }

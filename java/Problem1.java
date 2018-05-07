@@ -4,8 +4,9 @@
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-public class Problem1 {
-    private static int solution() {
+public class Problem1 implements EulerSolution {
+    @Override
+    public double solution() {
         int sum = 0;
 
         for (int n = 3; n < 1000; n++)
@@ -16,6 +17,6 @@ public class Problem1 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Problem1.solution());
+        System.out.println((new Problem1()).solution());
     }
 }

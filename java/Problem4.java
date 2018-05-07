@@ -4,8 +4,8 @@
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-public class Problem4 {
-    private static int solution() {
+public class Problem4 implements EulerSolution {
+    public double solution() {
         int maximalProduct = 0;
         int product;
         String productString;
@@ -27,6 +27,6 @@ public class Problem4 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Problem4.solution());
+        System.out.println((new Problem4()).solution());
     }
 }

@@ -4,8 +4,8 @@
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-public class Problem2 {
-    private static int solution() {
+public class Problem2 implements EulerSolution {
+    public double solution() {
         int sum = 0;
 
         int x = 1;
@@ -25,6 +25,6 @@ public class Problem2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Problem2.solution());
+        System.out.println((new Problem2()).solution());
     }
 }
