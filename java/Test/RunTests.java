@@ -11,6 +11,7 @@ import Problem.EulerSolution;
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,7 +31,8 @@ public class RunTests {
 
     private static void formatLogs(List<SolutionLog> solutionLogs) {
         for (SolutionLog solutionLog : solutionLogs) {
-            System.out.println("[Problem " + solutionLog.getProblemNumber() + "] " + solutionLog.getExecutionTimeMilliseconds() + " ms");
+            System.out.println("[Problem " + solutionLog.getProblemNumber() + "] " + String.format("%d µs",
+                    TimeUnit.NANOSECONDS.toMicros(solutionLog.getExecutionTime())));
         }
     }
 
@@ -43,9 +45,11 @@ public class RunTests {
                 Solution solution = (Solution) annotation;
 
                 long startTime = System.nanoTime();
-                return new SolutionLog(eulerSolution.getClass().getName(),
-                        solution.answer() == eulerSolution.solution(),
-                        System.nanoTime() - startTime);
+                double answer = eulerSolution.solution();
+                long executionTime = System.nanoTime() - startTime;
+                boolean isAnswerCorrect = solution.answer() == answer;
+
+                return new SolutionLog(eulerSolution.getClass().getName(), isAnswerCorrect, executionTime);
             }
         }
 
