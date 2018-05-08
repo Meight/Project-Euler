@@ -1,5 +1,11 @@
-import importlib
+import importlib, sys
 from timeit import default_timer as timer
+
+if len (sys.argv) != 2 :
+    print("Usage: python RunTests.py saveFilePath")
+    sys.exit (1)
+
+fileName = sys.argv[1]
 
 solutions = {
     1: "233168",
@@ -12,10 +18,12 @@ solutions = {
     8: "23514624000",
 }
 
-for (problem, solution) in sorted(solutions.items()):
-    module = importlib.import_module("python.problem.Problem{:d}".format(problem))
-    start = timer()
-    computedResult = str(module.result())
-    executionTime = timer() - start
+with open(fileName, 'a') as saveFile:
+    for (problem, solution) in sorted(solutions.items()):
+        module = importlib.import_module("python.problem.Problem{:d}".format(problem))
+        start = timer()
+        computedResult = str(module.result())
+        executionTime = timer() - start
 
-    print("{:d} {:7f}".format(problem, executionTime * 1_000_000))
+        saveFile.write("{:d} {:7f}\n".format(problem, executionTime * 1_000_000))
+
