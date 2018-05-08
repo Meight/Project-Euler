@@ -14,7 +14,6 @@ public class Problem8 implements EulerSolution {
 
     public double solution() {
         double maximalProduct = 0;
-        int maximalProductIndex = 0;
 
         String number =
                 "73167176531330624919225119674426574742355349194934\n" +
@@ -39,18 +38,17 @@ public class Problem8 implements EulerSolution {
                 "71636269561882670428252483600823257530420752963450";
 
         String[] numberParts = number.replace("\n", "").split("");
-        int[] figures = new int[numberParts.length];
+        int[] digits = new int[numberParts.length];
 
-        for (int i = 0; i < figures.length; i++) {
-            figures[i] = Integer.parseInt(numberParts[i]);
+        for (int i = 0; i < digits.length; i++) {
+            digits[i] = Integer.parseInt(numberParts[i]);
         }
 
-        for (int i = 0; i <= figures.length - WINDOW_SIZE; i++) {
-            double product = getWindowProduct(i, WINDOW_SIZE, figures);
+        for (int i = 0; i <= digits.length - WINDOW_SIZE; i++) {
+            double product = getWindowProduct(i, WINDOW_SIZE, digits);
 
             if (product > maximalProduct) {
                 maximalProduct = product;
-                maximalProductIndex = i;
             }
         }
 
