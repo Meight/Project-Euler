@@ -1,16 +1,21 @@
 /*
- * This file contains a solution to the problem number 5 of the Project Euler, last modified on 5/5/2018.
+ * This file contains a solution to the problem number 1 of the Project Euler, last modified on 5/6/2018.
  *
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-public class Problem5 {
+package Problem;
+
+import Test.Solution;
+
+@Solution(answer = 232792560)
+public class Problem5 implements EulerSolution {
     /**
      * We're practically looking for the LCM (lowest common multiple) of {1, ..., 20},
      * which we'll compute using the relation between LCM and GCD: LCM(a, b) = a * b / GCD(a, b).
      * We also use the commutative and associative properties of LCM to compute this result.
      */
-    private static int solution() {
+    public double solution() {
         int result = 1;
 
         for (int i = 1; i <= 20; i++) {
@@ -34,6 +39,6 @@ public class Problem5 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Problem5.solution());
+        System.out.println((new Problem5()).solution());
     }
 }

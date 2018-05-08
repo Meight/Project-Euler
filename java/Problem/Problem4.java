@@ -1,11 +1,16 @@
 /*
- * This file contains a solution to the problem number 4 of the Project Euler, last modified on 5/3/2018.
+ * This file contains a solution to the problem number 1 of the Project Euler, last modified on 5/6/2018.
  *
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-public class Problem4 {
-    private static int solution() {
+package Problem;
+
+import Test.Solution;
+
+@Solution(answer = 906609)
+public class Problem4 implements EulerSolution {
+    public double solution() {
         int maximalProduct = 0;
         int product;
         String productString;
@@ -27,6 +32,6 @@ public class Problem4 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Problem4.solution());
+        System.out.println((new Problem4()).solution());
     }
 }

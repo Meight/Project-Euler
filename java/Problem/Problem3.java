@@ -1,11 +1,16 @@
 /*
- * This file contains a solution to the problem number 3 of the Project Euler, last modified on 5/3/2018.
+ * This file contains a solution to the problem number 1 of the Project Euler, last modified on 5/6/2018.
  *
  * Copyright (c) Matthieu Le Boucher. All rights reserved.
  */
 
-public class Problem3 {
-    private static long solution() {
+package Problem;
+
+import Test.Solution;
+
+@Solution(answer = 6857)
+public class Problem3 implements EulerSolution {
+    public double solution() {
         // Target number is too large for 32-bit integer representation.
         long n = 600_851_475_143L;
 
@@ -22,6 +27,6 @@ public class Problem3 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Problem3.solution());
+        System.out.println((new Problem3()).solution());
     }
 }
