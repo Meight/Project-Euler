@@ -24,14 +24,7 @@ public class RunTests {
         for (Class solutionClass : solutions)
             solutionLogs.add(generateSolutionLog(solutionClass));
 
-        formatLogs(solutionLogs);
-    }
-
-    private static void formatLogs(List<SolutionLog> solutionLogs) {
-        for (SolutionLog solutionLog : solutionLogs) {
-            System.out.println("[Problem " + solutionLog.getProblemNumber() + "] " + String.format("%d µs",
-                    TimeUnit.NANOSECONDS.toMicros(solutionLog.getExecutionTime())));
-        }
+        LogsFormatter.formatLogs(solutionLogs);
     }
 
     private static SolutionLog generateSolutionLog(Class solutionClass)
@@ -55,7 +48,7 @@ public class RunTests {
         return null;
     }
 
-    private static class SolutionLog {
+    static class SolutionLog {
         private int problemNumber;
         private long executionTime;
         private boolean isCorrect;
