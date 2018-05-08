@@ -17,4 +17,5 @@ def digitsProduct(digits):
 
     return product
 
-print(result())
+if __name__ == "__main__":
+    print(result())
