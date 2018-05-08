@@ -18,4 +18,5 @@ def result():
 
     return maximalProduct
 
-print(result())
+if __name__ == "__main__":
+    print(result())

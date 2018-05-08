@@ -15,4 +15,5 @@ def result():
 
     return n
 
-print(result())
+if __name__ == "__main__":
+    print(result())
