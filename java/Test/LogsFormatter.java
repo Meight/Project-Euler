@@ -19,6 +19,7 @@ public class LogsFormatter {
         List<String> languages = new ArrayList<>();
 
         for (String filePath : args) {
+            filePath = filePath.trim();
             // Create new entry in solutions hash map.
             String currentLanguage = filePath.split("\\.")[0].split("_")[1];
             languages.add(currentLanguage);
