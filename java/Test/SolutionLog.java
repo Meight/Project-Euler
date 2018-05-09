@@ -3,10 +3,10 @@ package Test;
 class SolutionLog {
     private String language;
     private int problemNumber;
-    private long executionTime;
+    private double executionTime;
     private boolean isCorrect;
 
-    public SolutionLog(String language, int problemName, boolean isCorrect, long executionTime) {
+    public SolutionLog(String language, int problemName, boolean isCorrect, double executionTime) {
         this.language = language;
         this.problemNumber = problemName;
         this.executionTime = executionTime;
@@ -21,12 +21,8 @@ class SolutionLog {
         return problemNumber;
     }
 
-    public long getExecutionTime() {
+    public double getExecutionTime() {
         return executionTime;
-    }
-
-    public long getExecutionTimeMilliseconds() {
-        return executionTime / 1_000;
     }
 
     public boolean isCorrect() {

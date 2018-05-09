@@ -10,7 +10,7 @@ public class LogsFormatter {
     public static void formatLogs(List<SolutionLog> solutionLogs) {
         for (SolutionLog solutionLog : solutionLogs) {
             System.out.println(solutionLog.getProblemNumber() + " " + String.format("%d",
-                    TimeUnit.NANOSECONDS.toMicros(solutionLog.getExecutionTime())));
+                    TimeUnit.NANOSECONDS.toMicros((long) solutionLog.getExecutionTime())));
         }
     }
 
@@ -40,7 +40,7 @@ public class LogsFormatter {
                                     currentLanguage,
                                     problemNumber,
                                     true, // All solutions here are always correct.
-                                    Long.parseLong(splitLine[1]));
+                                    Double.parseDouble(splitLine[1]));
 
                     problemSolutions.get(problemNumber).add(solutionLog);
                 }
