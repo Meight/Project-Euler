@@ -7,15 +7,22 @@ NC='\033[0m' # No Color
 genericScriptName="runTests.sh"
 folders="java python"
 testsOutputDestination="tests"
+allTestFiles=""
 
 printf "Running all tests...\n\n"
 
 for folder in $folders; do
     printf "Running tests from folder '${RED}$folder${NC}'...\n"
 
-    $folder/$genericScriptName "$testsOutputDestination"_"$folder".dat
+    fileName="$testsOutputDestination"_"$folder".dat
+    $folder/$genericScriptName $fileName
+    allTestFiles="$allTestFiles $fileName"
 
-    printf "> ${GREEN} Done. Results saved to $testsOutputDestination.${NC}\n\n"
+    printf "> ${GREEN} Done. Results saved to $fileName.${NC}\n\n"
 done
+
+printf "Assembling tests from ${RED}$allTestFiles${NC}...\n\n"
+
+java/assembleTests.sh "$allTestFiles" > final.dat
 
 read -p "Press any key to continue... " -n1 -s
