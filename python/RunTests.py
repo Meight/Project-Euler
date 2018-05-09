@@ -25,5 +25,5 @@ with open(fileName, 'a') as saveFile:
         computedResult = str(module.result())
         executionTime = timer() - start
 
-        saveFile.write("{:d} {:7f}\n".format(problem, executionTime * 1_000_000))
+        saveFile.write("{:d} {:0f}\n".format(problem, executionTime * 1_000_000))
 
