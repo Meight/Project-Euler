@@ -40,7 +40,7 @@ public class RunTests {
                 long executionTime = System.nanoTime() - startTime;
                 boolean isAnswerCorrect = solution.answer() == answer;
 
-                return new SolutionLog(eulerSolution.getClass().getName(), isAnswerCorrect, executionTime);
+                return new SolutionLog("java", eulerSolution.getClass().getName(), isAnswerCorrect, executionTime);
             }
         }
 
@@ -49,17 +49,24 @@ public class RunTests {
     }
 
     static class SolutionLog {
+        private String language;
         private int problemNumber;
         private long executionTime;
         private boolean isCorrect;
 
-        public SolutionLog(String problemName, boolean isCorrect, long executionTime) {
-            Matcher matcher = Pattern.compile("\\d+").matcher(problemName);
-            matcher.find();
+        public SolutionLog(String language, String problemName, boolean isCorrect, long executionTime) {
+            this(language, Integer.valueOf(problemName), isCorrect, executionTime);
+        }
 
-            this.problemNumber = Integer.valueOf(matcher.group());
+        public SolutionLog(String language, int problemName, boolean isCorrect, long executionTime) {
+            this.language = language;
+            this.problemNumber = problemName;
             this.executionTime = executionTime;
             this.isCorrect = isCorrect;
+        }
+
+        public String getLanguage() {
+            return language;
         }
 
         public int getProblemNumber() {
