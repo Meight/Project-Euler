@@ -18,11 +18,9 @@ public class LogsFormatter {
         Map<Integer, List<SolutionLog>> problemSolutions = new HashMap<>();
         List<String> languages = new ArrayList<>();
 
-        System.out.println("Hi, arguments: " + args.length);
         for (String filePath : args) {
-            System.out.println(filePath);
             // Create new entry in solutions hash map.
-            String currentLanguage = filePath.split(".")[0];
+            String currentLanguage = filePath.split("\\.")[0].split("_")[1];
             languages.add(currentLanguage);
 
             try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
