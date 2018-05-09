@@ -9,6 +9,8 @@ import Problem.EulerSolution;
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RunTests {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
@@ -36,7 +38,7 @@ public class RunTests {
                 long executionTime = System.nanoTime() - startTime;
                 boolean isAnswerCorrect = solution.answer() == answer;
 
-                return new SolutionLog("java", eulerSolution.getClass().getName(), isAnswerCorrect, executionTime);
+                return new SolutionLog("java", solution.number(), isAnswerCorrect, executionTime);
             }
         }
 

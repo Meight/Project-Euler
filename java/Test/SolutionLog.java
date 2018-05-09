@@ -6,10 +6,6 @@ class SolutionLog {
     private long executionTime;
     private boolean isCorrect;
 
-    public SolutionLog(String language, String problemName, boolean isCorrect, long executionTime) {
-        this(language, Integer.valueOf(problemName), isCorrect, executionTime);
-    }
-
     public SolutionLog(String language, int problemName, boolean isCorrect, long executionTime) {
         this.language = language;
         this.problemNumber = problemName;
