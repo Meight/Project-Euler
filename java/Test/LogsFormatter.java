@@ -7,15 +7,15 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class LogsFormatter {
-    public static void formatLogs(List<RunTests.SolutionLog> solutionLogs) {
-        for (RunTests.SolutionLog solutionLog : solutionLogs) {
+    public static void formatLogs(List<SolutionLog> solutionLogs) {
+        for (SolutionLog solutionLog : solutionLogs) {
             System.out.println(solutionLog.getProblemNumber() + " " + String.format("%d",
                     TimeUnit.NANOSECONDS.toMicros(solutionLog.getExecutionTime())));
         }
     }
 
     public static void main(String[] args) {
-        Map<Integer, List<RunTests.SolutionLog>> problemSolutions = new HashMap<>();
+        Map<Integer, List<SolutionLog>> problemSolutions = new HashMap<>();
         List<String> languages = new ArrayList<>();
 
         for (String filePath : args) {
@@ -34,8 +34,8 @@ public class LogsFormatter {
                     if (!problemSolutions.containsKey(problemNumber))
                         problemSolutions.put(problemNumber, new ArrayList<>());
 
-                    RunTests.SolutionLog solutionLog =
-                            new RunTests.SolutionLog(
+                    SolutionLog solutionLog =
+                            new SolutionLog(
                                     currentLanguage,
                                     problemNumber,
                                     true, // All solutions here are always correct.
@@ -64,7 +64,7 @@ public class LogsFormatter {
         return header.toString();
     }
 
-    private static String parseProblemLine(int problemNumber, List<RunTests.SolutionLog> problemSolutions) {
+    private static String parseProblemLine(int problemNumber, List<SolutionLog> problemSolutions) {
         StringBuilder line = new StringBuilder(problemNumber + " ");
 
         problemSolutions.sort((o1, o2) -> {
@@ -73,7 +73,7 @@ public class LogsFormatter {
             return o1.getLanguage().compareTo(o2.getLanguage());
         });
 
-        for (RunTests.SolutionLog solutionLog : problemSolutions)
+        for (SolutionLog solutionLog : problemSolutions)
             line.append(solutionLog.getExecutionTime()).append(" ");
 
         return line.toString();
