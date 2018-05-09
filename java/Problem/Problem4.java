@@ -8,7 +8,7 @@ package Problem;
 
 import Test.Solution;
 
-@Solution(answer = 906609)
+@Solution(number = 4, answer = 906609)
 public class Problem4 implements EulerSolution {
     public double solution() {
         int maximalProduct = 0;

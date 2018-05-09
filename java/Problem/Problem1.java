@@ -8,7 +8,7 @@ package Problem;
 
 import Test.Solution;
 
-@Solution(answer = 233168)
+@Solution(number = 1, answer = 233168)
 public class Problem1 implements EulerSolution {
     @Override
     public double solution() {

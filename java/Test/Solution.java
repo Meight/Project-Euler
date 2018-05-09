@@ -14,5 +14,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface Solution {
+    int number() default 0;
     double answer() default 0;
 }

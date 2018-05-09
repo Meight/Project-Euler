@@ -8,7 +8,7 @@ package Problem;
 
 import Test.Solution;
 
-@Solution(answer = 232792560)
+@Solution(number = 5, answer = 232792560)
 public class Problem5 implements EulerSolution {
     /**
      * We're practically looking for the LCM (lowest common multiple) of {1, ..., 20},

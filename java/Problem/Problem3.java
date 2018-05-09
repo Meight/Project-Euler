@@ -8,7 +8,7 @@ package Problem;
 
 import Test.Solution;
 
-@Solution(answer = 6857)
+@Solution(number = 3, answer = 6857)
 public class Problem3 implements EulerSolution {
     public double solution() {
         // Target number is too large for 32-bit integer representation.

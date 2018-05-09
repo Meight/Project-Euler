@@ -8,7 +8,7 @@ package Problem;
 
 import Test.Solution;
 
-@Solution(answer = 25164150)
+@Solution(number = 6, answer = 25164150)
 public class Problem6 implements EulerSolution {
     public double solution() {
         int n = 100;

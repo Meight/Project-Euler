@@ -8,7 +8,7 @@ package Problem;
 
 import Test.Solution;
 
-@Solution(answer = 23514624000L)
+@Solution(number = 8, answer = 23514624000L)
 public class Problem8 implements EulerSolution {
     private static final int WINDOW_SIZE = 13;
 
