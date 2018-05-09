@@ -5,7 +5,7 @@ GREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
 genericScriptName="runTests.sh"
-folders="java"
+folders="java python"
 testsOutputDestination="tests"
 allTestFiles=""
 
@@ -24,7 +24,7 @@ done
 
 printf "Assembling tests from ${RED}$allTestFiles${NC}...\n\n"
 
-java/assembleTests.sh "$allTestFiles" > report/tests.dat
+java/assembleTests.sh $allTestFiles > report/tests.dat
 
 printf "Refreshing graph with assembled test data..."
 
