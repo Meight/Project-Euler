@@ -24,6 +24,12 @@ done
 
 printf "Assembling tests from ${RED}$allTestFiles${NC}...\n\n"
 
-java/assembleTests.sh "$allTestFiles" > final.dat
+java/assembleTests.sh "$allTestFiles" > report/tests.dat
+
+printf "Refreshing graph with assembled test data..."
+
+pdflatex -quiet -synctex=1 -interaction=nonstopmode -output-directory=report report/graph.tex
+
+printf "${GREEN} Done.${NC}\n\n"
 
 read -p "Press any key to continue... " -n1 -s
