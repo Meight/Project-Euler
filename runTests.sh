@@ -5,7 +5,7 @@ GREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
 genericScriptName="runTests.sh"
-folders="java python"
+folders="java"
 testsOutputDestination="tests"
 allTestFiles=""
 
@@ -14,7 +14,8 @@ printf "Running all tests...\n\n"
 for folder in $folders; do
     printf "Running tests from folder '${RED}$folder${NC}'...\n"
 
-    fileName="$testsOutputDestination"_"$folder".dat
+    fileName="$(dirname "$0")/$testsOutputDestination"_"$folder".dat
+    fileName="${fileName//\\//}"
     $folder/$genericScriptName $fileName
     allTestFiles="$allTestFiles $fileName"
 
