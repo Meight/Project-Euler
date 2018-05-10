@@ -10,6 +10,20 @@ import Test.Solution;
 
 @Solution(number = 9, answer = 31875000)
 public class Problem9 implements EulerSolution {
+    /**
+     * We use a parametrization of Pythagorean triplets (a, b, c), and several properties:
+     *      - GCD(a, b) = GCD(b, c) = GCD(a, c).
+     *      - if GCD(a, b) = 1 (primitive triplet), then there exists m and n s.t. m > n > 0 and
+     *             a = m² - n², b = 2mn, c = m² + n².
+     *      - the triplet is therefore primitive only if GCD(m, n) = 1 and either m or n is even.
+     * We try to get from any triplet to a primitive triplet by dividing by the GCD d. Using this parametrization,
+     * one has:
+     *              a + b + c = 2md(m + n).
+     *
+     * The problem is equivalent to finding a divisor m of half the total sum, and an odd divisor k of the same half
+     * divided by m. (with k in [m, 2m] and GCD(k, m) = 1).
+     * @return The product a * b * c.of the triplet (a, b, c) such that a + b + c = 1000.
+     */
     public double solution() {
         int sum = 1000;
         int halfSum = sum / 2;
