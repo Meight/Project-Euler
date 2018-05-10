@@ -1,5 +1,7 @@
 package Problem;
 
+import java.util.Arrays;
+
 /**
  * @author Matthieu Le Boucher
  */
@@ -39,5 +41,24 @@ public class EulerUtils {
             return a;
         else
             return gcd(b, a % b);
+    }
+
+    public static boolean[] getSieve(int limit) {
+        int sieveBound = (limit - 1 ) / 2;
+        boolean[] sieve = new boolean[sieveBound];
+        Arrays.fill(sieve, false);
+
+        int halfLimit = (int) ((Math.sqrt(limit) - 1) / 2);
+
+        for (int i = 0; i < halfLimit; i++)
+            if (!sieve[i])
+                for (int j = 2 * (i + 1) * (i + 2); j < sieveBound; j += 2 * (i + 1) + 1)
+                    sieve[j] = true;
+
+        return sieve;
+    }
+
+    public static boolean isPrimeInSieve(int n, boolean[] sieve) {
+        return !sieve[n / 2 - 1];
     }
 }
