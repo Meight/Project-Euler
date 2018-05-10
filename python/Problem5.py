@@ -3,17 +3,13 @@
 # Copyright (c) Matthieu Le Boucher. All rights reserved.
 #
 
-def gcd(a, b):
-    if b == 0:
-        return a
-    else:
-        return gcd(b, a % b)
+import EulerUtils
 
 def result():
     result = 1
 
     for i in range(1, 20):
-        result = result * i // gcd(result, i)
+        result = result * i // EulerUtils.gcd(result, i)
 
     return result
 
