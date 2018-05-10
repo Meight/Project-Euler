@@ -50,15 +50,15 @@ public class EulerUtils {
 
         int halfLimit = (int) ((Math.sqrt(limit) - 1) / 2);
 
-        for (int i = 0; i < halfLimit; i++)
+        for (int i = 1; i < halfLimit; i++)
             if (!sieve[i])
-                for (int j = 2 * (i + 1) * (i + 2); j < sieveBound; j += 2 * (i + 1) + 1)
+                for (int j = 2 * i * (i + 1); j < sieveBound; j += 2 * i + 1)
                     sieve[j] = true;
 
         return sieve;
     }
 
     public static boolean isPrimeInSieve(int n, boolean[] sieve) {
-        return !sieve[n / 2 - 1];
+        return n % 2 != 0 && !sieve[(n - 1) / 2];
     }
 }
