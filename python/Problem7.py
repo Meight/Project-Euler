@@ -14,7 +14,6 @@ def result():
         currentNumber += 2
 
         if EulerUtils.isPrime(currentNumber):
-            print("{}: {}".format(primesCounter, currentNumber))
             primesCounter += 1
 
     return currentNumber
