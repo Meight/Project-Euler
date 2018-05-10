@@ -19,23 +19,10 @@ public class Problem5 implements EulerSolution {
         int result = 1;
 
         for (int i = 1; i <= 20; i++) {
-            result *= i / gcd(i, result);
+            result *= i / EulerUtils.gcd(i, result);
         }
 
         return result;
-    }
-
-    /**
-     * Computes the greater common divisor of two integers that are not all zero.
-     * @param a First integer.
-     * @param b Second integer.
-     * @return The largest integer that divides each of the integers.
-     */
-    private static int gcd(int a, int b) {
-        if (b == 0)
-            return a;
-        else
-            return gcd(b, a % b);
     }
 
     public static void main(String[] args) {
