@@ -22,6 +22,10 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 | 8 | ✔ | ✔ |  |
 | 9 | ✔ | ✔ |  |
 
+## Work in progress
+
+I'm currently working on problems 10 and 11.
+
 # Upcoming
 
 ## New programming languages
