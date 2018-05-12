@@ -6,6 +6,8 @@ My current statistics on Project Euler are:
 
 ![My stats.](https://projecteuler.net/profile/Meight.png "My stats.")
 
+I solved these a long time ago using brute force the vast majority of the time. I'm now rewriting each one of these solutions in a much smarter, faster, economic way.
+
 # Solutions and programming languages
 
 Most solutions are derived in three different approaches (paradigms) using Java, Python and F# programming languages.
@@ -21,6 +23,14 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 | 7 | ✔ | ✔ |  |
 | 8 | ✔ | ✔ |  |
 | 9 | ✔ | ✔ |  |
+| 10 | ~ | ~ | |
+| 11 | ~ | | |
+
+## Work in progress
+
+I'm currently working on problems 10 and 11. 
+
+F# for problem 7 is bugged; looks like the primality test lets a few non-primal numbers through at some point (10,001th is only off by about 50 prime numbers). Currently investigating.
 
 # Upcoming
 
@@ -30,10 +40,11 @@ For learning purposes, solutions will be transcribed over time in the following 
 
 * Haskell;
 * R;
-* Rust.
+* Rust;
+* good ol' PHP for fun.
 
 ## Statistical analysis
 
-- [ ] Automate tests; 
+- [x] Automate tests; 
 - [ ] Log execution time for each approach/programming language;
-- [ ] Automate graph generation from gathered data.
+- [x] Automate graph generation from gathered data.
