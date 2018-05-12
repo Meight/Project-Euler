@@ -6,6 +6,8 @@ My current statistics on Project Euler are:
 
 ![My stats.](https://projecteuler.net/profile/Meight.png "My stats.")
 
+I solved these a long time ago using brute force the vast majority of the time.
+
 # Solutions and programming languages
 
 Most solutions are derived in three different approaches (paradigms) using Java, Python and F# programming languages.
