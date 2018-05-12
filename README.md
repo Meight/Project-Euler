@@ -26,6 +26,10 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 | 10 | ~ | ~ | |
 | 11 | ~ | | |
 
+## Performances
+
+All performances are automatically gathered and compared in a beautiful [Graph](report/graph.pdf).
+
 ## Work in progress
 
 I'm currently working on problems 10 and 11. 
