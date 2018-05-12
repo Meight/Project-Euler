@@ -23,6 +23,8 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 | 7 | ✔ | ✔ |  |
 | 8 | ✔ | ✔ |  |
 | 9 | ✔ | ✔ |  |
+| 10 | ~ | ~ | |
+| 11 | ~ | | |
 
 ## Work in progress
 
