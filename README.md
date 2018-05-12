@@ -24,7 +24,9 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 
 ## Work in progress
 
-I'm currently working on problems 10 and 11. F# for problem 7 is bugged; looks like the primality test lets a few non-primal numbers through at some point (10,001th is only off by about 50 prime numbers).
+I'm currently working on problems 10 and 11. 
+
+F# for problem 7 is bugged; looks like the primality test lets a few non-primal numbers through at some point (10,001th is only off by about 50 prime numbers). Currently investigating.
 
 # Upcoming
 
