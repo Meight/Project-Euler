@@ -6,7 +6,7 @@ My current statistics on Project Euler are:
 
 ![My stats.](https://projecteuler.net/profile/Meight.png "My stats.")
 
-I solved these a long time ago using brute force the vast majority of the time.
+I solved these a long time ago using brute force the vast majority of the time. I'm now rewriting each one of these solutions in a much smarter, faster, economic way.
 
 # Solutions and programming languages
 
