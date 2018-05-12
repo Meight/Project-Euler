@@ -28,7 +28,7 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 
 ## Performances
 
-All performances are automatically gathered and compared in a beautiful [graph](report/graph.pdf). Please note that the time scale is logarithmic and microseconds.
+All performances are automatically gathered and compared in a [beautiful graph](report/graph.pdf). Please note that the time scale is logarithmic and in microseconds.
 
 ## Work in progress
 
