@@ -38,7 +38,8 @@ For learning purposes, solutions will be transcribed over time in the following 
 
 * Haskell;
 * R;
-* Rust.
+* Rust;
+* good ol' PHP for fun.
 
 ## Statistical analysis
 
