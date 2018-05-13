@@ -22,7 +22,7 @@ solutions = {
 
 with open(fileName, 'a') as saveFile:
     for (problem, solution) in sorted(solutions.items()):
-        module = importlib.import_module("Problem{:d}".format(problem))
+        module = importlib.import_module("Problem{:03d}".format(problem))
         start = timer()
         computedResult = str(module.result())
         executionTime = timer() - start
