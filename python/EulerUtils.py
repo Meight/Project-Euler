@@ -35,10 +35,10 @@ def gcd(a, b):
         return gcd(b, a % b)
 
 def sieve(n):
-    bound = n / 2
+    bound = int(n / 2)
     sieve = [False] * bound
 
-    crossLimit: int = (math.floor(math.sqrt(n)) - 1) / 2
+    crossLimit = int((math.floor(math.sqrt(n)) - 1) / 2)
 
     for i in range(1, crossLimit):
         if not sieve[i]:
