@@ -44,16 +44,17 @@ public class EulerUtils {
     }
 
     public static boolean[] getSieve(int limit) {
-        int sieveBound = (limit - 1 ) / 2;
+        int sieveBound = (limit) / 2;
         boolean[] sieve = new boolean[sieveBound];
         Arrays.fill(sieve, false);
 
-        int halfLimit = (int) ((Math.sqrt(limit) - 1) / 2);
+        int halfLimit = (int) ((Math.floor(Math.sqrt(limit)) - 1) / 2);
 
-        for (int i = 1; i < halfLimit; i++)
-            if (!sieve[i])
+        for (int i = 1; i <= halfLimit; i++)
+            if (!sieve[i]) // 2i + 1 is prime, mark its multiples.
                 for (int j = 2 * i * (i + 1); j < sieveBound; j += 2 * i + 1)
                     sieve[j] = true;
+
 
         return sieve;
     }
