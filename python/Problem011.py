@@ -41,10 +41,10 @@ def result():
         if i % 20 < 17:
             products.append(grid[i] * grid[i + 1] * grid[i + 2] * grid[i + 3])
         # Diagonal \ product.
-        if i % 20 < 17 and i < 340:
+        if i < 340 and i % 20 < 17:
             products.append(grid[i] * grid[i + 21] * grid[i + 42] * grid[i + 63])
         # Diagonal / product.
-        if i % 20 > 3 and i < 340:
+        if i < 340 and i % 20 > 3:
             products.append(grid[i] * grid[i + 19] * grid[i + 38] * grid[i + 57])
 
     return max(products)
