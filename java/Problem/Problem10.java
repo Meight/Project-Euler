@@ -10,16 +10,17 @@ import Test.Solution;
 
 @Solution(number = 10, answer = 142913828922L)
 public class Problem10 implements EulerSolution {
+    /**
+     * Since we know the amount of prime numbers we want to sum up, we can just use a good ol' sieve.
+     * @return The sum of all prime numbers below 2 million.
+     */
     public double solution() {
-        int limit = 2000000;
+        int limit = 2_000_000;
         boolean[] sieve = EulerUtils.getSieve(limit);
 
         double sum = 2;
-        for (int i = 1; i <= (limit - 1) / 2; i++) {
-            if (!sieve[i]) {
-                sum += 2 * i + 1;
-            }
-        }
+        for (int i = 1; i <= (limit - 1) / 2; i++)
+            if (!sieve[i]) sum += 2 * i + 1;
 
         return sum;
     }
