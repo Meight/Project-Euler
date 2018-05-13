@@ -9,7 +9,7 @@ package Problem;
 import Test.Solution;
 
 @Solution(number = 3, answer = 6857)
-public class Problem3 implements EulerSolution {
+public class Problem003 implements EulerSolution {
     public double solution() {
         // Target number is too large for 32-bit integer representation.
         long n = 600_851_475_143L;
@@ -27,6 +27,6 @@ public class Problem3 implements EulerSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println((new Problem3()).solution());
+        System.out.println((new Problem003()).solution());
     }
 }

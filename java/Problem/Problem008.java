@@ -9,7 +9,7 @@ package Problem;
 import Test.Solution;
 
 @Solution(number = 8, answer = 23514624000L)
-public class Problem8 implements EulerSolution {
+public class Problem008 implements EulerSolution {
     private static final int WINDOW_SIZE = 13;
 
     public double solution() {
@@ -68,6 +68,6 @@ public class Problem8 implements EulerSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println(String.format("%.0f", (new Problem8()).solution()));
+        System.out.println(String.format("%.0f", (new Problem008()).solution()));
     }
 }

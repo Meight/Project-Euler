@@ -9,7 +9,7 @@ package Problem;
 import Test.Solution;
 
 @Solution(number = 2, answer = 4613732)
-public class Problem2 implements EulerSolution {
+public class Problem002 implements EulerSolution {
     public double solution() {
         int sum = 0;
 
@@ -30,6 +30,6 @@ public class Problem2 implements EulerSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println((new Problem2()).solution());
+        System.out.println((new Problem002()).solution());
     }
 }

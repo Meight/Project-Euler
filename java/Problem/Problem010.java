@@ -9,7 +9,7 @@ package Problem;
 import Test.Solution;
 
 @Solution(number = 10, answer = 142913828922L)
-public class Problem10 implements EulerSolution {
+public class Problem010 implements EulerSolution {
     /**
      * Since we know the amount of prime numbers we want to sum up, we can just use a good ol' sieve.
      * @return The sum of all prime numbers below 2 million.
@@ -26,6 +26,6 @@ public class Problem10 implements EulerSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println(String.format("%.0f", (new Problem10()).solution()));
+        System.out.println(String.format("%.0f", (new Problem010()).solution()));
     }
 }

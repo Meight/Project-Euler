@@ -9,7 +9,7 @@ package Problem;
 import Test.Solution;
 
 @Solution(number = 5, answer = 232792560)
-public class Problem5 implements EulerSolution {
+public class Problem005 implements EulerSolution {
     /**
      * We're practically looking for the LCM (lowest common multiple) of {1, ..., 20},
      * which we'll compute using the relation between LCM and GCD: LCM(a, b) = a * b / GCD(a, b).
@@ -26,6 +26,6 @@ public class Problem5 implements EulerSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println((new Problem5()).solution());
+        System.out.println((new Problem005()).solution());
     }
 }

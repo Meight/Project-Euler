@@ -9,7 +9,7 @@ package Problem;
 import Test.Solution;
 
 @Solution(number = 9, answer = 31875000)
-public class Problem9 implements EulerSolution {
+public class Problem009 implements EulerSolution {
     /**
      * We use a parametrization of Pythagorean triplets (a, b, c), and several properties:
      *      - GCD(a, b) = GCD(b, c) = GCD(a, c).
@@ -58,6 +58,6 @@ public class Problem9 implements EulerSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println(String.format("%.0f", (new Problem9()).solution()));
+        System.out.println(String.format("%.0f", (new Problem009()).solution()));
     }
 }

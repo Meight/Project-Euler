@@ -9,7 +9,7 @@ package Problem;
 import Test.Solution;
 
 @Solution(number = 4, answer = 906609)
-public class Problem4 implements EulerSolution {
+public class Problem004 implements EulerSolution {
     public double solution() {
         int maximalProduct = 0;
         int product;
@@ -32,6 +32,6 @@ public class Problem4 implements EulerSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println((new Problem4()).solution());
+        System.out.println((new Problem004()).solution());
     }
 }
