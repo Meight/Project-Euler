@@ -26,6 +26,9 @@ def isPrime(number):
     return True
 
 def gcd(a, b):
+    """
+    Returns the greater common divisor of two numbers that are not both zero.
+    """
     if b == 0:
         return a
     else:
