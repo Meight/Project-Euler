@@ -3,9 +3,16 @@ package Problem;
 import java.util.Arrays;
 
 /**
+ * Set of recurrent mathematical helpers used here and there in various solutions.
+ *
  * @author Matthieu Le Boucher
  */
 public class EulerUtils {
+    /**
+     * Optimized approach to check for the primality of a given number.
+     * @param number The number whose primality is to check.
+     * @return True if the number is prime, false otherwise.
+     */
     public static boolean isPrime(int number) {
         if (number == 1)
             return false;
@@ -43,6 +50,11 @@ public class EulerUtils {
             return gcd(b, a % b);
     }
 
+    /**
+     * Generates an optimized sieve of Eratosthenes of given size under the form of an array of booleans.
+     * @param limit The expected size of the sieve.
+     * @return An optimized sieve such that sieve[i] is false if and only if (2i + 1 is prime).
+     */
     public static boolean[] getSieve(int limit) {
         int sieveBound = (limit) / 2;
         boolean[] sieve = new boolean[sieveBound];
