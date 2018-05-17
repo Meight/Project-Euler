@@ -71,7 +71,4 @@ public class EulerUtils {
         return sieve;
     }
 
-    public static boolean isPrimeInSieve(int n, boolean[] sieve) {
-        return n % 2 != 0 && !sieve[(n - 1) / 2];
-    }
 }
