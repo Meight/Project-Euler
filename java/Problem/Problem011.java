@@ -12,10 +12,6 @@ import java.util.Arrays;
 
 @Solution(number = 11, answer = 70600674)
 public class Problem011 implements EulerSolution {
-    /**
-     * Since we know the amount of prime numbers we want to sum up, we can just use a good ol' sieve.
-     * @return The sum of all prime numbers below 2 million.
-     */
     public double solution() {
         String input =
                 "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\n" +
