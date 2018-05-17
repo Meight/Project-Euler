@@ -29,7 +29,7 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 | 13 | ✔ |  | |
 | 14 | ✔ | ✔ | |
 | 15 | ✔ |  | |
-| 16 | ✔ |  | |
+| 16 | ✔ | ✔ | |
 
 ## Performances
 
