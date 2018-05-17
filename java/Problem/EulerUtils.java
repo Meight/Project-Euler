@@ -77,7 +77,7 @@ public class EulerUtils {
 
         int divisorsAmount;
 
-        for (int i = 2; i < Math.ceil(Math.sqrt(n)) + 1; i++) {
+        for (int i = 2; i < Math.floor(Math.sqrt(n)); i++) {
             if (n % i == 0) {
                 divisorsAmount = 1;
 
