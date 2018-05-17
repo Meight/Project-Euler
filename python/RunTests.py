@@ -21,7 +21,9 @@ solutions = {
     11: "70600674",
     #
     #
-    14: "837799"
+    14: "837799",
+    #
+    16: "1366"
 }
 
 with open(fileName, 'a') as saveFile:
