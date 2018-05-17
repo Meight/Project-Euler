@@ -22,7 +22,7 @@ public class Problem014 implements EulerSolution {
         int currentChainLength;
 
         for (int n = 500000; n < MAX_STARTING_NUMBER; n++) {
-            // Computer current chain length.
+            // Compute current chain length.
             double i = n;
             currentChainLength = 1;
 
@@ -47,8 +47,6 @@ public class Problem014 implements EulerSolution {
                 currentChainLength++;
             }
         }
-
-        System.out.println("Longest chain is Collatz(" + maxChainNumber + ") of length " + maxChainLength);
 
         return maxChainNumber;
     }
