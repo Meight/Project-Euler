@@ -12,6 +12,14 @@ import java.util.Arrays;
 
 @Solution(number = 13, answer = 5537376230L)
 public class Problem013 implements EulerSolution {
+    /**
+     * Since we are only interested in the first 10 digits of the sum, we need not consider the entire digits of each
+     * number as the right part has lower powers of ten. It's obvious that anything coming after the 11th digit of
+     * a given number won't contribute much to the total sum. Therefore, we only add together the first 11 digits of
+     * each number.
+     *
+     * @return The first 10 digits of the sum of the hundred 50-digit numbers given.
+     */
     public double solution() {
         String string = "37107287533902102798797998220837590246510135740250\n" +
                         "46376937677490009712648124896970078050417018260538\n" +
