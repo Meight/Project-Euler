@@ -45,6 +45,8 @@ public class LogsFormatter {
 
                             problemSolutions.get(i).add(new SolutionLog(currentLanguage, i, false, -1));
                         }
+
+                        problemsCount = problemNumber;
                     }
 
                     SolutionLog solutionLog =
