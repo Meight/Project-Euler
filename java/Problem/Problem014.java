@@ -32,7 +32,7 @@ public class Problem014 implements EulerSolution {
                     i /= 2;
 
                     // If Collatz(i) has already been seen.
-                    if (i > 0 && i < n) {
+                    if (i < n) {
                         chainLengths[n] = currentChainLength + chainLengths[(int) i];
 
                         if (chainLengths[n] > maxChainLength) {
