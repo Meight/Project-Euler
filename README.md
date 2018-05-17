@@ -34,8 +34,6 @@ All performances are automatically gathered and compared in a [beautiful graph](
 
 ## Work in progress
 
-I'm currently working on problems 10 and 11. 
-
 F# for problem 7 is bugged; looks like the primality test lets a few non-primal numbers through at some point (10,001th is only off by about 50 prime numbers). Currently investigating.
 
 # Upcoming
