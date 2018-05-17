@@ -20,10 +20,11 @@ public class Problem014 implements EulerSolution {
         chainLengths[1] = 1;
 
         int currentChainLength;
+        double i;
 
         for (int n = 500000; n < MAX_STARTING_NUMBER; n++) {
             // Compute current chain length.
-            double i = n;
+            i = n;
             currentChainLength = 1;
 
             while (i != 1) {
