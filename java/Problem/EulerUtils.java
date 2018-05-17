@@ -71,7 +71,7 @@ public class EulerUtils {
         return sieve;
     }
 
-    public int divisorsAmount(int n) {
+    public static int divisorsAmount(int n) {
         int divisorsAmount = 0;
 
         for (int i = 1; i < Math.ceil(Math.sqrt(n)) + 1; i++) {
