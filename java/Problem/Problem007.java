@@ -7,6 +7,7 @@
 package Problem;
 
 import Test.Solution;
+import Utils.Arithmetics;
 
 @Solution(number = 7, answer = 104743)
 public class Problem007 implements EulerSolution {
@@ -17,7 +18,7 @@ public class Problem007 implements EulerSolution {
         while (primesCounter < 10_001) {
             currentNumber += 2;
 
-            if (EulerUtils.isPrime(currentNumber))
+            if (Arithmetics.isPrime(currentNumber))
                 primesCounter++;
         }
 

@@ -7,6 +7,7 @@
 package Problem;
 
 import Test.Solution;
+import Utils.Arithmetics;
 
 @Solution(number = 10, answer = 142913828922L)
 public class Problem010 implements EulerSolution {
@@ -16,7 +17,7 @@ public class Problem010 implements EulerSolution {
      */
     public double solution() {
         int limit = 2_000_000;
-        boolean[] sieve = EulerUtils.getSieve(limit);
+        boolean[] sieve = Arithmetics.getSieve(limit);
 
         double sum = 2;
         for (int i = 1; i <= (limit - 1) / 2; i++)

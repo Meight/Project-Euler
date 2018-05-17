@@ -7,6 +7,7 @@
 package Problem;
 
 import Test.Solution;
+import Utils.Arithmetics;
 
 @Solution(number = 9, answer = 31875000)
 public class Problem009 implements EulerSolution {
@@ -39,7 +40,7 @@ public class Problem009 implements EulerSolution {
             int k = (m % 2 == 1) ? m + 2 : m + 1;
 
             while (k < 2 * m && k <= remainder) {
-                if (remainder % k == 0 && EulerUtils.gcd(k, m) == 1) {
+                if (remainder % k == 0 && Arithmetics.gcd(k, m) == 1) {
                     int d = halfSum / (k * m);
                     int n = k - m;
 

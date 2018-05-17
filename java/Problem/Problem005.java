@@ -7,6 +7,7 @@
 package Problem;
 
 import Test.Solution;
+import Utils.Arithmetics;
 
 @Solution(number = 5, answer = 232792560)
 public class Problem005 implements EulerSolution {
@@ -19,7 +20,7 @@ public class Problem005 implements EulerSolution {
         int result = 1;
 
         for (int i = 1; i <= 20; i++) {
-            result *= i / EulerUtils.gcd(i, result);
+            result *= i / Arithmetics.gcd(i, result);
         }
 
         return result;

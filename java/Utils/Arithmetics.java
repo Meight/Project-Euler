@@ -1,4 +1,4 @@
-package Problem;
+package Utils;
 
 import java.util.Arrays;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
  *
  * @author Matthieu Le Boucher
  */
-public class EulerUtils {
+public class Arithmetics {
     /**
      * Optimized approach to check for the primality of a given number.
      * @param number The number whose primality is to check.

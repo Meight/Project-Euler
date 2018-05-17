@@ -7,6 +7,7 @@
 package Problem;
 
 import Test.Solution;
+import Utils.Arithmetics;
 
 @Solution(number = 12, answer = 76576500)
 public class Problem012 implements EulerSolution {
@@ -26,8 +27,8 @@ public class Problem012 implements EulerSolution {
         while (true) {
             int divisorsAmount =
                     (i % 2 == 0)
-                            ? EulerUtils.divisorsAmount(i / 2) * EulerUtils.divisorsAmount(i + 1)
-                            : EulerUtils.divisorsAmount(i) * EulerUtils.divisorsAmount((i + 1) / 2);
+                            ? Arithmetics.divisorsAmount(i / 2) * Arithmetics.divisorsAmount(i + 1)
+                            : Arithmetics.divisorsAmount(i) * Arithmetics.divisorsAmount((i + 1) / 2);
 
             if (divisorsAmount >= DIVISORS_WANTED)
                 return nthTriangularNumber(i);
