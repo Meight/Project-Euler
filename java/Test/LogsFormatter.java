@@ -7,6 +7,8 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class LogsFormatter {
+    private static final String NON_EXISTING_PROBLEM_PLACEHOLDER = "nan";
+
     public static void formatLogs(List<SolutionLog> solutionLogs) {
         for (SolutionLog solutionLog : solutionLogs) {
             System.out.println(solutionLog.getProblemNumber() + " " + String.format("%d",
@@ -25,6 +27,7 @@ public class LogsFormatter {
             languages.add(currentLanguage);
 
             try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
+                int problemsCount = 1;
                 String currentLine;
 
                 while ((currentLine = bufferedReader.readLine()) != null) {
@@ -35,6 +38,15 @@ public class LogsFormatter {
                     if (!problemSolutions.containsKey(problemNumber))
                         problemSolutions.put(problemNumber, new ArrayList<>());
 
+                    if (problemNumber != problemsCount) {
+                        for (int i = problemsCount; i < problemNumber; i++) {
+                            if (!problemSolutions.containsKey(i))
+                                problemSolutions.put(i, new ArrayList<>());
+
+                            problemSolutions.get(i).add(new SolutionLog(currentLanguage, i, false, -1));
+                        }
+                    }
+
                     SolutionLog solutionLog =
                             new SolutionLog(
                                     currentLanguage,
@@ -43,6 +55,8 @@ public class LogsFormatter {
                                     Double.parseDouble(splitLine[1]));
 
                     problemSolutions.get(problemNumber).add(solutionLog);
+
+                    problemsCount++;
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -74,8 +88,12 @@ public class LogsFormatter {
             return o1.getLanguage().compareTo(o2.getLanguage());
         });
 
-        for (SolutionLog solutionLog : problemSolutions)
-            line.append(solutionLog.getExecutionTime()).append(" ");
+        for (SolutionLog solutionLog : problemSolutions) {
+            if (solutionLog.getExecutionTime() != -1)
+                line.append(solutionLog.getExecutionTime()).append(" ");
+            else
+                line.append(NON_EXISTING_PROBLEM_PLACEHOLDER).append(" ");
+        }
 
         return line.toString();
     }
