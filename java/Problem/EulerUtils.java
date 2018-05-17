@@ -71,4 +71,18 @@ public class EulerUtils {
         return sieve;
     }
 
+    public int divisorsAmount(int n) {
+        int divisorsAmount = 0;
+
+        for (int i = 1; i < Math.ceil(Math.sqrt(n)) + 1; i++) {
+            if (n % i == 0)
+                divisorsAmount += 2;
+
+            if (i * i == n)
+                // Takes care of the case where n is a perfect square.
+                divisorsAmount--;
+        }
+
+        return divisorsAmount;
+    }
 }
