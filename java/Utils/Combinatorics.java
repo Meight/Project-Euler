@@ -6,6 +6,10 @@ package Utils;
  * @author Matthieu Le Boucher
  */
 public class Combinatorics {
+
+    /**
+     * Computes binomial coefficients, or n choose k.
+     */
     public static double choose(int n, int k) {
         if (k < 0 || k > n)
             return 0;
