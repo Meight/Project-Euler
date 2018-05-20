@@ -45,6 +45,7 @@ F# for problem 7 is bugged; looks like the primality test lets a few non-primal 
 
 For learning purposes, solutions will be transcribed over time in the following programming languages (in order of priority).
 
+* C++;
 * Haskell;
 * R;
 * Rust;
