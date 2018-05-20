@@ -12,24 +12,24 @@ I solved these a long time ago using brute force the vast majority of the time. 
 
 Most solutions are derived in three different approaches (paradigms) using Java, Python and F# programming languages.
 
-| Problem        | Java           | Python  | F# |
-| :--------------: |:--------------:| :-------:|:----:|
-| 1 | ✔ | ✔ | ✔ |
-| 2 | ✔ | ✔ | ✔ |
-| 3 | ✔ | ✔ | ✔ |
-| 4 | ✔ | ✔ | ✔ |
-| 5 | ✔ | ✔ | ✔ |
-| 6 | ✔ | ✔ | ✔ |
-| 7 | ✔ | ✔ |  |
-| 8 | ✔ | ✔ |  |
-| 9 | ✔ | ✔ |  |
-| 10 | ✔ | ✔ | |
-| 11 | ✔ | ✔ | |
-| 12 | ✔ |  | |
-| 13 | ✔ |  | |
-| 14 | ✔ | ✔ | |
-| 15 | ✔ |  | |
-| 16 | ✔ | ✔ | |
+| Problem        | Java           | Python  | F# | C++ |
+| :--------------: |:--------------:| :-------:|:----:|:----:|
+| 1 | ✔ | ✔ | ✔ | ✔ |
+| 2 | ✔ | ✔ | ✔ |  |
+| 3 | ✔ | ✔ | ✔ |  |
+| 4 | ✔ | ✔ | ✔ |  |
+| 5 | ✔ | ✔ | ✔ |  |
+| 6 | ✔ | ✔ | ✔ |  |
+| 7 | ✔ | ✔ |  |  |
+| 8 | ✔ | ✔ |  |  |
+| 9 | ✔ | ✔ |  |  |
+| 10 | ✔ | ✔ | |  |
+| 11 | ✔ | ✔ | |  |
+| 12 | ✔ |  | |  |
+| 13 | ✔ |  | |  |
+| 14 | ✔ | ✔ | |  |
+| 15 | ✔ |  | |  |
+| 16 | ✔ | ✔ | |  |
 
 ## Performances
 
@@ -45,6 +45,7 @@ F# for problem 7 is bugged; looks like the primality test lets a few non-primal 
 
 For learning purposes, solutions will be transcribed over time in the following programming languages (in order of priority).
 
+* C++;
 * Haskell;
 * R;
 * Rust;
