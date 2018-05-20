@@ -6,6 +6,7 @@
 #include <vector>
 #include <chrono>
 #include <stdio.h>
+#include <fstream>
 
 #include "EulerSolution.h"
 #include "Problem001.cpp"
@@ -14,7 +15,12 @@
 
 using namespace std;
 
+typedef std::chrono::nanoseconds time_resolution;
+
 int main() {
+    ofstream testLogs;
+    testLogs.open ("../tests.dat");
+
     EulerSolution* solutions[] = {
             new Problem001(),
             new Problem002(),
@@ -24,10 +30,13 @@ int main() {
     for (EulerSolution *solution : solutions) {
         auto startTime = std::chrono::high_resolution_clock::now();
         bool isCorrect = solution->solution() == solution->answer();
-        std::chrono::duration<double> elapsed = std::chrono::high_resolution_clock::now() - startTime;
+        std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - startTime;
+        time_resolution elapsed = std::chrono::duration_cast<time_resolution>(duration);
 
-        cout << solution->number() << " " << elapsed.count() << (isCorrect ? "" : "*** FAILURE. ***") << endl;
+        testLogs << solution->number() << " " << elapsed.count() / 1000.0 << (isCorrect ? "" : "*** FAILURE. ***") << endl;
     }
+
+    testLogs.close();
 
     return 0;
 }
