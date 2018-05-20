@@ -1,0 +1,1 @@
+start "" cmake-build-release/RunTests.exe

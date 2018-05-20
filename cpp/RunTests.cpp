@@ -19,7 +19,7 @@ typedef std::chrono::nanoseconds time_resolution;
 
 int main() {
     ofstream testLogs;
-    testLogs.open ("../tests.dat");
+    testLogs.open ("tests.dat");
 
     EulerSolution* solutions[] = {
             new Problem001(),
