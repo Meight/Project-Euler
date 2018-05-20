@@ -10,13 +10,15 @@
 #include "EulerSolution.h"
 #include "Problem001.cpp"
 #include "Problem002.cpp"
+#include "Problem003.cpp"
 
 using namespace std;
 
 int main() {
     EulerSolution* solutions[] = {
             new Problem001(),
-            new Problem002()
+            new Problem002(),
+            new Problem003()
     };
 
     for (EulerSolution *solution : solutions) {
