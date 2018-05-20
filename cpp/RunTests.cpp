@@ -17,9 +17,11 @@ using namespace std;
 
 typedef std::chrono::nanoseconds time_resolution;
 
-int main() {
+int main(int argc, char *argv[]) {
+    string fileName(argc > 0 ? argv[1] : "tests.dat");
+
     ofstream testLogs;
-    testLogs.open ("tests.dat");
+    testLogs.open(fileName);
 
     EulerSolution* solutions[] = {
             new Problem001(),
