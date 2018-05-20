@@ -3,7 +3,7 @@
  */
 
 #include <iostream>
-#include <map>
+#include <vector>
 #include <chrono>
 
 #include "EulerSolution.h"
@@ -12,21 +12,16 @@
 using namespace std;
 
 int main() {
-    map<EulerSolution*, double> solutions;
-    solutions[new Problem001()] = 233168;
+    EulerSolution* solutions[] = {
+            new Problem001()
+    };
 
-    auto iterator = solutions.begin();
-
-    while(iterator != solutions.end())
-    {
-        EulerSolution *solution = iterator->first;
-
+    for (EulerSolution *solution : solutions) {
         auto startTime = std::chrono::high_resolution_clock::now();
-        bool isCorrect = solution->solution() == iterator->second;
+        bool isCorrect = solution->solution() == solution->answer();
         std::chrono::duration<double> elapsed = std::chrono::high_resolution_clock::now() - startTime;
 
         cout << solution->number() << " " << elapsed.count() << (isCorrect ? "" : "*** FAILURE. ***") << endl;
-        iterator++;
     }
 
     return 0;

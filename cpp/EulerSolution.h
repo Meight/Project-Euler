@@ -9,6 +9,7 @@ class EulerSolution {
 public:
     virtual int number() = 0;
     virtual double solution() = 0;
+    virtual double answer() = 0;
 };
 
 #endif

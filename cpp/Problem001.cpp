@@ -19,4 +19,8 @@ public:
 
         return sum;
     }
+
+    double answer() override {
+        return 233168;
+    }
 };
