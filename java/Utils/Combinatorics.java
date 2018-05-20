@@ -8,7 +8,9 @@ package Utils;
 public class Combinatorics {
 
     /**
-     * Computes binomial coefficients, or n choose k.
+     * Computes binomial coefficients, or n choose k,
+     * i.e. the number of ways to choose a subset of
+     * k elements within a set of n elements.
      */
     public static double choose(int n, int k) {
         if (k < 0 || k > n)
