@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 11)
 set(SOURCE_FILES
         RunTests.cpp)
 
-add_executable(cpp ${SOURCE_FILES})
+add_executable(RunTests ${SOURCE_FILES})
