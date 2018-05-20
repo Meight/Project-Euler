@@ -5,7 +5,7 @@ GREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
 genericScriptName="runTests.sh"
-folders="java python"
+folders="java python cpp"
 testsOutputDestination="tests"
 allTestFiles=""
 
