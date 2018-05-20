@@ -15,7 +15,7 @@ Most solutions are derived in three different approaches (paradigms) using Java,
 | Problem        | Java           | Python  | F# | C++ |
 | :--------------: |:--------------:| :-------:|:----:|:----:|
 | 1 | ✔ | ✔ | ✔ | ✔ |
-| 2 | ✔ | ✔ | ✔ |  |
+| 2 | ✔ | ✔ | ✔ | ✔ |
 | 3 | ✔ | ✔ | ✔ |  |
 | 4 | ✔ | ✔ | ✔ |  |
 | 5 | ✔ | ✔ | ✔ |  |
