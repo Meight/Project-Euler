@@ -39,6 +39,8 @@ All performances are automatically gathered and compared in a [beautiful graph](
 
 F# for problem 7 is bugged; looks like the primality test lets a few non-primal numbers through at some point (10,001th is only off by about 50 prime numbers). Currently investigating.
 
+There's a problem with C++ strings in solution 8.
+
 # Upcoming
 
 ## New programming languages
