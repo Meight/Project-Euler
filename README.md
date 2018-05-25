@@ -46,9 +46,3 @@ For learning purposes, solutions will be transcribed over time in the following 
 * R;
 * Rust;
 * good ol' PHP for fun.
-
-## Statistical analysis
-
-- [x] Automate tests; 
-- [x] Log execution time for each approach/programming language;
-- [x] Automate graph generation from gathered data.
