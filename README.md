@@ -41,7 +41,7 @@ All performances are automatically gathered and compared in a [beautiful graph](
 
 For learning purposes, solutions will be transcribed over time in the following programming languages (in order of priority).
 
-* C++;
+* C++ (ongoing);
 * Haskell;
 * R;
 * Rust;
