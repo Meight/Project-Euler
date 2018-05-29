@@ -1,8 +1,7 @@
 #include "EulerSolution.h"
 #include <cmath>
 #include "EulerUtils.h"
-#include <vector>
-
+#include <iostream>
 /*
  * @author Matthieu Le Boucher <matt.leboucher@gmail.com>
  */
@@ -17,7 +16,7 @@ public:
 
     double solution() override {
         int limit = 2000000;
-        vector<bool> sieve = Arithmetics.getSieve(limit);
+        vector<bool> sieve = EulerUtils::get_sieve(limit);
 
         double sum = 2;
         for (int i = 1; i <= (limit - 1) / 2; i++)
@@ -27,6 +26,6 @@ public:
     }
 
     double answer() override {
-        return 31875000;
+        return 142913828922L;
     }
 };
