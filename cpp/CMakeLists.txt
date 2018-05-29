@@ -12,6 +12,7 @@ set(SOURCE_FILES
         Problem007.cpp
         Problem008.cpp
         Problem009.cpp
+        Problem010.cpp
         Problem014.cpp
         RunTests.cpp)
 

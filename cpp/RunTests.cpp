@@ -17,6 +17,7 @@
 #include "Problem007.cpp"
 #include "Problem008.cpp"
 #include "Problem009.cpp"
+#include "Problem010.cpp"
 #include "Problem014.cpp"
 
 using namespace std;
@@ -39,6 +40,7 @@ int main(int argc, char *argv[]) {
             new Problem007(),
             new Problem008(),
             new Problem009(),
+            new Problem010(),
             new Problem014(),
     };
 
