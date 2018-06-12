@@ -14,6 +14,7 @@ set(SOURCE_FILES
         Problem009.cpp
         Problem010.cpp
         Problem014.cpp
+        Problem019.cpp
         RunTests.cpp)
 
 add_executable(RunTests ${SOURCE_FILES})
